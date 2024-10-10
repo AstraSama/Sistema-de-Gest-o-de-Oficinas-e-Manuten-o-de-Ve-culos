@@ -2,12 +2,13 @@ import Workshop from "../../database/models/workshop_model.js";
 
 export const store = async (req, res) => {
   try {
-    const { text } = req.body;
-    const user = req.user._id;
+    const { name, address, specialties, maintenances } = req.body;
 
     const content = await Workshop.create({
-      text,
-      user,
+      name,
+      address,
+      specialties,
+      maintenances,
     });
 
     res.status(201).json(content);
@@ -15,6 +16,7 @@ export const store = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+
 
 export const index = async (req, res) => {
   try {

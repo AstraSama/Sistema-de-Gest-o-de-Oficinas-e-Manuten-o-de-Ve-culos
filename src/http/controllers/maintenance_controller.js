@@ -2,12 +2,14 @@ import Maintenance from "../../database/models/maintenance_model.js";
 
 export const store = async (req, res) => {
   try {
-    const { text } = req.body;
-    const user = req.user._id;
+    const { workshop, vehicle, services, date, total_cost } = req.body;
 
     const content = await Maintenance.create({
-      text,
-      user,
+      workshop,
+      vehicle,
+      services,
+      date,
+      total_cost,
     });
 
     res.status(201).json(content);
@@ -15,6 +17,7 @@ export const store = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+
 
 export const index = async (req, res) => {
   try {
