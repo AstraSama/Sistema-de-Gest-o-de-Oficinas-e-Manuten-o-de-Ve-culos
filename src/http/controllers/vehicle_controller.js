@@ -2,12 +2,14 @@ import Vehicle from "../../database/models/vehicle_model.js";
 
 export const store = async (req, res) => {
   try {
-    const { text } = req.body;
-    const user = req.user._id;
+    const { plate, model, year, owner, maintenances } = req.body;
 
     const content = await Vehicle.create({
-      text,
-      user,
+      plate,
+      model,
+      year,
+      owner,
+      maintenances,
     });
 
     res.status(201).json(content);
@@ -15,6 +17,7 @@ export const store = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+
 
 export const index = async (req, res) => {
   try {
