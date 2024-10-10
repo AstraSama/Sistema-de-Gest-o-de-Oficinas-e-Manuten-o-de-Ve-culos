@@ -1,0 +1,25 @@
+{
+  "name": "sistema-de-gest-o-de-oficinas-e-manuten-o-de-ve-culos",
+  "version": "1.0.0",
+  "description": "Desenvolver um sistema para gerenciar oficinas mecânicas que oferecem serviços de manutenção em veículos. O sistema deve permitir o cadastro de oficinas, veículos e serviços de manutenção. Cada veículo pode ser levado para a manutenção em diferentes oficinas, e cada manutenção pode incluir múltiplos serviços.",
+  "main": "./src/http/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/http/index.js",
+    "start": "node ./src/http/index.js",
+    "build": "npm i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
