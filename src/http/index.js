@@ -17,6 +17,5 @@ app.use("/maintenance", maintenance_router);
 app.use("/vehicle", vehicle_router);
 app.use("/workshop", workshop_router);
 
-// como faço uso do post/get/show de modo que a partir do postman consiga visualizar os resultados?
 
 app.listen(process.env.API_PORT, () => console.log("Server running"));
